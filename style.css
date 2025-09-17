@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --purple50: hsl(260, 100%, 95%);
+  --purple300: hsl(264, 82%, 80%);
+  --purple500: hsl(263, 55%, 52%);
+  --white: hsl(0, 0%, 100%);
+  --grey100: hsl(214, 17%, 92%);
+  --grey200: hsl(0, 0%, 81%);
+  --grey400: hsl(224, 10%, 45%);
+  --grey500: hsl(217, 19%, 35%);
+  --dark-blue: hsl(219, 29%, 14%);
+  --black: hsl(0, 0%, 7%);
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  background-color: hsl(214, 17%, 96%);
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 62.5rem;
+}
+
+.icon-purple {
+  border-radius: 6.25rem;
+  border: 0.1563rem solid hsla(264, 82%, 80%, 0.6);
+  width: 2.375rem;
+  height: 2.375rem;
+}
+
+.icon {
+  border-radius: 6.25rem;
+  width: 2.375rem;
+  height: 2.375rem;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.user-class {
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.lead-paragraph {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+article {
+  line-height: 1.125rem;
+  opacity: 0.8;
+  padding-top: 0.5rem;
+}
+
+.name-user {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.icon-name {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.section--daniel {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: var(--purple500);
+  border-radius: 0.625rem;
+  padding: 1.5rem;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 2.5rem;
+  box-shadow: rgba(100, 100, 111, 0.8) 0.25rem 0.4375rem 1.8125rem 0rem;
+  cursor: pointer;
+}
+
+.section--daniel:hover,
+.section--jonathan:hover,
+.section--kira:hover,
+.section--jeanette:hover,
+.section--patrick:hover {
+  box-shadow: hsla(264, 82%, 80%, 0.8) 0.5rem 1.875rem 1.8125rem 0rem;
+  transition: all 0.4s ease;
+}
+
+.section--jonathan {
+  grid-column-start: 3;
+  background-color: var(--grey500);
+  border-radius: 0.625rem;
+  padding: 1.5rem;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  box-shadow: rgba(100, 100, 111, 0.8) 0.25rem 0.4375rem 1.8125rem 0rem;
+  cursor: pointer;
+}
+
+.section--jeanette {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  background-color: var(--white);
+  border-radius: 0.625rem;
+  padding: 1.5rem;
+  color: var(--grey400);
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  box-shadow: rgba(100, 100, 111, 0.5) 0.25rem 0.4375rem 1.8125rem 0rem;
+  cursor: pointer;
+}
+
+.section--patrick {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  background-color: var(--black);
+  border-radius: 0.625rem;
+  padding: 1.5rem;
+  color: var(--grey200);
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  box-shadow: rgba(100, 100, 111, 0.5) 0.25rem 0.4375rem 1.8125rem 0rem;
+  cursor: pointer;
+}
+
+.section--kira {
+  grid-column-start: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: var(--white);
+  border-radius: 0.625rem;
+  padding: 1.5rem;
+  color: var(--grey400);
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  box-shadow: rgba(100, 100, 111, 0.3) 0.25rem 0.4375rem 2.5rem 0.625rem;
+  cursor: pointer;
+}
+
+footer {
+  color: var(--grey400);
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin: 2.5rem 0;
+}
+
+/* === responsive === */
+
+@media (max-width: 64.375rem) {
+  main {
+    grid-template-columns: 1fr;
+    width: 70%;
+    margin: 2.5rem 0;
+  }
+
+  .section--daniel {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-image: none;
+  }
+  .section--jonathan {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .section--jeanette {
+    grid-row-start: 3;
+  }
+  .section--patrick {
+    grid-row-start: 4;
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .section--kira {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+  }
+}
+
+@media (max-width: 42.5rem) {
+  main {
+    width: 90%;
+  }
+}
